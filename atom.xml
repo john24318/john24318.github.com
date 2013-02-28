@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[John's code place]]></title>
   <link href="http://john24318.github.com/atom.xml" rel="self"/>
   <link href="http://john24318.github.com/"/>
-  <updated>2013-02-28T20:05:24+08:00</updated>
+  <updated>2013-02-28T20:48:19+08:00</updated>
   <id>http://john24318.github.com/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[John Liu]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[技術日誌開始啦!]]></title>
+    <link href="http://john24318.github.com/blog/2013/02/28/ji-shu-ri-zhi-kai-shi-la/"/>
+    <updated>2013-02-28T20:27:00+08:00</updated>
+    <id>http://john24318.github.com/blog/2013/02/28/ji-shu-ri-zhi-kai-shi-la</id>
+    <content type="html"><![CDATA[<p>這是第1篇,今後繼續加油啦！</p>
+]]></content>
+  </entry>
   
 </feed>

@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>John's code place</title>
+  <title>頂尖設計公司進行Brain Storming的七條規則 - John's code place</title>
   <meta name="author" content="John Liu">
 
   
@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://john24318.github.com/">
+  <link rel="canonical" href="http://john24318.github.com/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -67,15 +67,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/">頂尖設計公司進行Brain Storming的七條規則</a></h1>
+      <h1 class="entry-title">頂尖設計公司進行Brain Storming的七條規則</h1>
     
     
       <p class="meta">
@@ -93,14 +90,14 @@
 
 <time datetime="2013-03-06T21:11:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2013</time>
         
-         | <a href="/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/#disqus_thread">Comments</a>
+         | <a href="#disqus_thread">Comments</a>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>“The Best way to get a good idea is to get a lot of ideas.”<br>
+<div class="entry-content"><p>“The Best way to get a good idea is to get a lot of ideas.”<br>
 要得到好的點子，首先要獲得很多點子。<br>
 「七條原則」：<br>
 1、暫緩評論（Defer Judgment）<br>
@@ -162,149 +159,16 @@
 <blockquote><p>Teach a man to build a fire, he is warm for the evening…Light him on fire he is HOT forever.<br/>選擇對的人，並點燃他們的激情！</p></blockquote>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/01/tao-yan-de-juniper-vpn/">討厭的Juniper VPN</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">John Liu</span></span>
 
-<time datetime="2013-03-01T01:22:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2013</time>
-        
-         | <a href="/blog/2013/03/01/tao-yan-de-juniper-vpn/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>在Linux安裝討厭的Juniper VPN</p>
-
-<p>1.完整移除Java:<br>
-Remove all the Java related packages (Sun, Oracle, OpenJDK, IcedTea plugins, GIJ):</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get update
-</span><span class='line'>apt-cache search java | awk '{print($1)}' | grep -E -e '^(ia32-)?(sun|oracle)-java' -e '^openjdk-' -e '^icedtea' -e '^(default|gcj)-j(re|dk)' -e '^gcj-(.*)-j(re|dk)' -e 'java-common' | xargs sudo apt-get -y remove
-</span><span class='line'>sudo apt-get -y autoremove</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Purge config files:<br></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>dpkg -l | grep ^rc | awk '{print($2)}' | xargs sudo apt-get -y purge</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Remove Java config and cache directory:<br></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo bash -c 'ls -d /home/*/.java' | xargs sudo rm -rf</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Remove manually installed JVMs:<br></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo rm -rf /usr/lib/jvm/*</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Remove Java entries, if there is still any, from the alternatives:<br></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>for g in ControlPanel java java_vm javaws jcontrol jexec keytool mozilla-javaplugin.so orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200 appletviewer apt extcheck HtmlConverter idlj jar jarsigner javac javadoc javah javap jconsole jdb jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii rmic schemagen serialver wsgen wsimport xjc xulrunner-1.9-javaplugin.so; do sudo update-alternatives --remove-all $g; done</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Search for possible remaining Java directories:<br></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo updatedb
-</span><span class='line'>sudo locate -b '\pack200'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>2.移除Juniper_networks並重新安裝Java<br>
-Deleting ~/.juniper_networks:<br></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rm -rf .juniper_networks/^C</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Download the Oracle JDK from PPA:<br></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo add-apt-repository ppa:webupd8team/java
-</span><span class='line'>sudo apt-get update
-</span><span class='line'>sudo apt-get install oracle-java7-installer
-</span><span class='line'>sudo apt-get install oracle-java7-set-default</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Config java (Choose Oracle java)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo update-alternatives --config java
-</span><span class='line'>sudo update-alternatives --config javac
-</span><span class='line'>sudo update-alternatives --config javaws</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Link browser to java applet</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir ~/.mozilla/plugins/
-</span><span class='line'>ln -s /usr/lib/jvm/java-7-oracle/jre/lib/i386/libnpjp2.so ~/.mozilla/plugins/</span></code></pre></td></tr></table></div></figure>
-
-
-<p>3.打開firefox瀏覽器連VPN, 查看/var/log/sysloeg, 應該不會出現以下error了:<br>
-kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 4 in libc-2.15.so[b755e000+19f000]</p>
-
-<p>Reference:<br>
-<a href="http://dougmunsinger.com/posts/juniper-vpn-on-linux.html">http://dougmunsinger.com/posts/juniper-vpn-on-linux.html</a>
-<a href="http://askubuntu.com/questions/84483/how-to-completely-uninstall-java">http://askubuntu.com/questions/84483/how-to-completely-uninstall-java</a>
-<a href="http://mad-scientist.us/juniper.html">http://mad-scientist.us/juniper.html</a>
-<a href="http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html">http://www.webupd8.org/2012/01/install-oracle-java-jdk-7-in-ubuntu-via.html</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/28/ji-shu-ri-zhi-kai-shi-la/">技術日誌開始啦!</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -316,29 +180,48 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
   
 
 
-<time datetime="2013-02-28T20:27:00+08:00" pubdate data-updated="true">Feb 28<span>th</span>, 2013</time>
-        
-         | <a href="/blog/2013/02/28/ji-shu-ri-zhi-kai-shi-la/#disqus_thread">Comments</a>
-        
-      </p>
+<time datetime="2013-03-06T21:11:00+08:00" pubdate data-updated="true">Mar 6<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/開會-七條原則/'>開會,七條原則</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>我的技術日誌開張了, 今後要繼續加油啦!</p>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://john24318.github.com/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/" data-via="john24318" data-counturl="http://john24318.github.com/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/01/tao-yan-de-juniper-vpn/" title="Previous Post: 討厭的Juniper VPN">&laquo; 討厭的Juniper VPN</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+  </section>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -364,7 +247,7 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
 <section>
   <h1>Latest Tweets</h1>
   <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   <script type="text/javascript">
     $.domReady(function(){
@@ -393,6 +276,7 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
   
 </aside>
 
+
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -407,7 +291,10 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
       var disqus_shortname = 'john24318';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://john24318.github.com/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/';
+        var disqus_url = 'http://john24318.github.com/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -3,7 +3,7 @@ layout: post
 title: "頂尖設計公司進行Brain Storming的七條規則"
 date: 2013-03-06 21:11
 comments: true
-categories: 開會,七條原則
+categories: 開會 七條原則
 ---
 “The Best way to get a good idea is to get a lot of ideas.”<br>
 要得到好的點子，首先要獲得很多點子。<br>
@@ -68,3 +68,5 @@ Process provides the direction. People provide the force.
 Teach a man to build a fire, he is warm for the evening…Light him on fire he is HOT forever.
 選擇對的人，並點燃他們的激情！
 {% endblockquote %}
+
+文章來源：[http://www.inside.com.tw/2013/03/04/7-rules-for-brainstorming](http://www.inside.com.tw/2013/03/04/7-rules-for-brainstorming)

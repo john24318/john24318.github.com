@@ -3,7 +3,7 @@ layout: post
 title: "討厭的Juniper VPN"
 date: 2013-03-01 01:22
 comments: true
-categories: VPN, Linux
+categories: VPN Linux
 ---
 在Linux安裝討厭的Juniper VPN
 

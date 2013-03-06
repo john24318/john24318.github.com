@@ -69,9 +69,9 @@ mkdir ~/.mozilla/plugins/
 ln -s /usr/lib/jvm/java-7-oracle/jre/lib/i386/libnpjp2.so ~/.mozilla/plugins/
 {% endcodeblock %}
 
-3.打開firefox瀏覽器連VPN<br>
-查看/var/log/sysloeg, 應該不會出現以下error了<br>
+3.打開firefox瀏覽器連VPN, 查看/var/log/sysloeg, 應該不會出現以下error了:<br>
 kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 4 in libc-2.15.so[b755e000+19f000]
+
 
 Reference:<br>
 [http://dougmunsinger.com/posts/juniper-vpn-on-linux.html](http://dougmunsinger.com/posts/juniper-vpn-on-linux.html)

@@ -4,7 +4,7 @@
   <title><![CDATA[John's code place]]></title>
   <link href="http://john24318.github.com/atom.xml" rel="self"/>
   <link href="http://john24318.github.com/"/>
-  <updated>2013-03-09T17:50:28+08:00</updated>
+  <updated>2013-03-09T17:53:32+08:00</updated>
   <id>http://john24318.github.com/</id>
   <author>
     <name><![CDATA[John Liu]]></name>
@@ -191,7 +191,7 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
 常用的Octopress指令：<br/>
 發表文章: rake new_post[&#8220;title&#8221;]<br/>
 預覽文章: rake preview<br/>
-佈署到github: 1.rake generate, 2.git add., 3.git ci -m &#8220;&#8221;, 4.rake deploy<br/></p>
+佈署到github: 1.rake generate, 2.git add ., 3.git ci -m &#8220;&#8221;, 4.rake deploy<br/></p>
 ]]></content>
   </entry>
   

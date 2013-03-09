@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: 開會 - John's code place</title>
+  <title>CSS 屬性 display 的值 inline block inline-block none - John's code place</title>
   <meta name="author" content="John Liu">
 
   
-  <meta name="description" content="Category: 開會">
+  <meta name="description" content="常用的4種display: 1. display: none 把 HTML 元件的 display 設為 none 就是不顯示這個東西。display: none 和 visibility: hidden 的差別是 display: none 這個東西就不見了，不佔空間，visibility: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://john24318.github.com/blog/categories/開會/">
+  <link rel="canonical" href="http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -63,36 +63,132 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: 開會</h1>
+    
+      <h1 class="entry-title">CSS 屬性 Display 的值 Inline Block Inline-block None</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-09T18:24:00+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>常用的4種display:</p>
 
-  
-  <h2>2013</h2>
+<p><strong>1. display: none</strong></p>
 
-<article>
-  
-<h1><a href="/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/">頂尖設計公司進行Brain Storming的七條規則</a></h1>
-<time datetime="2013-03-06T21:11:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>06</span> <span class='year'>2013</span></time>
+<p>把 HTML 元件的 display 設為 none 就是不顯示這個東西。display: none 和 visibility: hidden 的差別是 display: none 這個東西就不見了，不佔空間，visibility: hidden 只是隱形看不見，還是有佔空間。</p>
 
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/七條原則/'>七條原則</a>, <a class='category' href='/blog/categories/開會/'>開會</a></span>
-</footer>
+<p><strong>2. display: inline</strong></p>
 
+<p>&lt;a>、&lt;span>、&lt;b>、&lt;i>、&lt;img>、&lt;iframe>&#8230;  這幾個 HTML 元素預設的 display 屬性是 inline，用最簡單的講法解釋 display: inline 就是兩個 display: inline 的元素連在一起會在同一行，不會換行。</p>
 
-</article>
+<p>display: inline 的 HTML 元素可以有 margin-left、margin-right、padding-left、padding-right，但不能有 margin-top、margin-bottom、padding-top、padding-bottom、width、heightbackground-image 。</p>
 
+<p>要讓 display: inline 元素水平置中的方式是在此元素的父元素加上 text-align: center。<br/>
+※當然你也可以用 CSS 把預設是 display: inline 的 HTML 元素設成 display: block 。</p>
+
+<p>附帶一提，display: inline 元素不該包住 display: block 元素。</p>
+
+<p><strong>3.display: block</strong></p>
+
+<p>&lt;div>、&lt;p>、&lt;h1>、&lt;h2>&#8230;  這幾種 HTML 元素預設的 display 屬性是 block ，簡單講就是不管 display: block 元素的前面後面是什麼，碰到 display: block 元素就是會換行，而 display: block 元素的寬度預設會撐到最大。</p>
+
+<p>display: block 元素不管是 margin、padding、width、height、background-image 通通都可以。</p>
+
+<p>要將 display: block 元素水平置中，方法是在此元素加上 margin: 0 auto， 0 可以取代為任何數字。</p>
+
+<p>※當然也可以用 CSS 把預設是 display: block 的 HTML 元素設成 display: inline 。</p>
+
+<p><strong>4.display: inline-block</strong></p>
+
+<p>顧名思義，就是外面是 inline，裡面是 block 。</p>
+
+<p>所以碰到 display: inline-block 元素不會換行，但是又可以設定 padding-top、padding-bottom、width、height、background-image。</p>
+
+<p>用 CSS 讓連結用圖片顯示就是 inline-block 常見的應用。</p>
+
+<p>參考資料：<a href="http://blog.xuite.net/vexed/tech/29221717-CSS+%E5%B1%AC%E6%80%A7+display+%E7%9A%84%E5%80%BC+inline+block+inline-block+none">http://blog.xuite.net/vexed/tech/29221717-CSS+%E5%B1%AC%E6%80%A7+display+%E7%9A%84%E5%80%BC+inline+block+inline-block+none</a></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">John Liu</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-09T18:24:00+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/css/'>CSS</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/" data-via="john24318" data-counturl="http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/06/ding-jian-she-ji-gong-si-jin-xing-brain-stormingde-qi-tiao-gui-ze/" title="Previous Post: 頂尖設計公司進行Brain Storming的七條規則">&laquo; 頂尖設計公司進行Brain Storming的七條規則</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -169,7 +265,10 @@
       var disqus_shortname = 'john24318';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/';
+        var disqus_url = 'http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -4,7 +4,7 @@
   <title><![CDATA[John's code place]]></title>
   <link href="http://john24318.github.com/atom.xml" rel="self"/>
   <link href="http://john24318.github.com/"/>
-  <updated>2013-03-09T17:53:32+08:00</updated>
+  <updated>2013-03-09T18:45:16+08:00</updated>
   <id>http://john24318.github.com/</id>
   <author>
     <name><![CDATA[John Liu]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[CSS 屬性 display 的值 inline block inline-block none]]></title>
+    <link href="http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/"/>
+    <updated>2013-03-09T18:24:00+08:00</updated>
+    <id>http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none</id>
+    <content type="html"><![CDATA[<p>常用的4種display:</p>
+
+<p><strong>1. display: none</strong></p>
+
+<p>把 HTML 元件的 display 設為 none 就是不顯示這個東西。display: none 和 visibility: hidden 的差別是 display: none 這個東西就不見了，不佔空間，visibility: hidden 只是隱形看不見，還是有佔空間。</p>
+
+<p><strong>2. display: inline</strong></p>
+
+<p>&lt;a>、&lt;span>、&lt;b>、&lt;i>、&lt;img>、&lt;iframe>&#8230;  這幾個 HTML 元素預設的 display 屬性是 inline，用最簡單的講法解釋 display: inline 就是兩個 display: inline 的元素連在一起會在同一行，不會換行。</p>
+
+<p>display: inline 的 HTML 元素可以有 margin-left、margin-right、padding-left、padding-right，但不能有 margin-top、margin-bottom、padding-top、padding-bottom、width、heightbackground-image 。</p>
+
+<p>要讓 display: inline 元素水平置中的方式是在此元素的父元素加上 text-align: center。<br/>
+※當然你也可以用 CSS 把預設是 display: inline 的 HTML 元素設成 display: block 。</p>
+
+<p>附帶一提，display: inline 元素不該包住 display: block 元素。</p>
+
+<p><strong>3.display: block</strong></p>
+
+<p>&lt;div>、&lt;p>、&lt;h1>、&lt;h2>&#8230;  這幾種 HTML 元素預設的 display 屬性是 block ，簡單講就是不管 display: block 元素的前面後面是什麼，碰到 display: block 元素就是會換行，而 display: block 元素的寬度預設會撐到最大。</p>
+
+<p>display: block 元素不管是 margin、padding、width、height、background-image 通通都可以。</p>
+
+<p>要將 display: block 元素水平置中，方法是在此元素加上 margin: 0 auto， 0 可以取代為任何數字。</p>
+
+<p>※當然也可以用 CSS 把預設是 display: block 的 HTML 元素設成 display: inline 。</p>
+
+<p><strong>4.display: inline-block</strong></p>
+
+<p>顧名思義，就是外面是 inline，裡面是 block 。</p>
+
+<p>所以碰到 display: inline-block 元素不會換行，但是又可以設定 padding-top、padding-bottom、width、height、background-image。</p>
+
+<p>用 CSS 讓連結用圖片顯示就是 inline-block 常見的應用。</p>
+
+<p>參考資料：<a href="http://blog.xuite.net/vexed/tech/29221717-CSS+%E5%B1%AC%E6%80%A7+display+%E7%9A%84%E5%80%BC+inline+block+inline-block+none">http://blog.xuite.net/vexed/tech/29221717-CSS+%E5%B1%AC%E6%80%A7+display+%E7%9A%84%E5%80%BC+inline+block+inline-block+none</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[頂尖設計公司進行Brain Storming的七條規則]]></title>
@@ -191,7 +235,20 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
 常用的Octopress指令：<br/>
 發表文章: rake new_post[&#8220;title&#8221;]<br/>
 預覽文章: rake preview<br/>
-佈署到github: 1.rake generate, 2.git add ., 3.git ci -m &#8220;&#8221;, 4.rake deploy<br/></p>
+佈署到github: 1.rake generate, 2.git add ., 3.git ci -m &#8220;message&#8221;, 4.rake deploy</p>
+
+<p>markdown語法：<br/>
+換行: 兩個空格<br/>
+換段落: 兩個Enter<br/>
+超連結: [文字](URL)<br/>
+圖片: ![alt 文字](圖片URL)<br/>
+標題: #一級標題, ##二級標題&#8230;  ######六級標題<br/>
+引言: >後面接文字<br/>
+強調: *單星號*, **雙星號**<br/>
+分隔線: 3個以上減號  &#8212;</p>
+
+<p>參考資料：<a href="http://markdown.tw/">http://markdown.tw/</a><br/>
+<a href="http://zerodie.github.com/blog/2012/01/19/octopress-github-pages/">http://zerodie.github.com/blog/2012/01/19/octopress-github-pages/</a></p>
 ]]></content>
   </entry>
   

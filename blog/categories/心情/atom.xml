@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 心情 | John's code place]]></title>
   <link href="http://john24318.github.com/blog/categories/心情/atom.xml" rel="self"/>
   <link href="http://john24318.github.com/"/>
-  <updated>2013-03-09T17:53:32+08:00</updated>
+  <updated>2013-03-09T18:45:16+08:00</updated>
   <id>http://john24318.github.com/</id>
   <author>
     <name><![CDATA[John Liu]]></name>
@@ -22,7 +22,20 @@
 常用的Octopress指令：<br/>
 發表文章: rake new_post["title"]<br/>
 預覽文章: rake preview<br/>
-佈署到github: 1.rake generate, 2.git add ., 3.git ci -m "", 4.rake deploy<br/></p>
+佈署到github: 1.rake generate, 2.git add ., 3.git ci -m "message", 4.rake deploy</p>
+
+<p>markdown語法：<br/>
+換行: 兩個空格<br/>
+換段落: 兩個Enter<br/>
+超連結: [文字](URL)<br/>
+圖片: ![alt 文字](圖片URL)<br/>
+標題: #一級標題, ##二級標題...  ######六級標題<br/>
+引言: >後面接文字<br/>
+強調: *單星號*, **雙星號**<br/>
+分隔線: 3個以上減號  ---</p>
+
+<p>參考資料：<a href="http://markdown.tw/">http://markdown.tw/</a><br/>
+<a href="http://zerodie.github.com/blog/2012/01/19/octopress-github-pages/">http://zerodie.github.com/blog/2012/01/19/octopress-github-pages/</a></p>
 ]]></content>
   </entry>
   

@@ -5,7 +5,12 @@ date: 2013-03-09 18:24
 comments: true
 categories: CSS
 ---
-常用的4種display:
+常用的4種display:  
+**1. display: none**   
+**2. display: inline**  (ex:  \<a\>、\<span\>、\<b\>、\<i\>、\<img\>、\<iframe\>...)  
+**3.display: block**  (ex:  \<div\>、\<p\>、\<h1\>、\<h2\>...)  
+**4.display: inline-block**  
+<!-- more -->
 
 
 **1. display: none**  

@@ -1,5 +1,7 @@
+$header-bg-back: url("/images/header/header_201303.jpg");
+
 body > header {
-  background: $header-bg;
+  background-image: $header-bg-back;
   h1 {
     display: inline-block;
     margin: 0;

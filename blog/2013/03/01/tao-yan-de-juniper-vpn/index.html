@@ -99,7 +99,10 @@ apt- &hellip;">
 
 <div class="entry-content"><p>在Linux安裝討厭的Juniper VPN</p>
 
-<p>1.完整移除Java:<br>
+<!-- more -->
+
+
+<p>1.完整移除Java:<br/>
 Remove all the Java related packages (Sun, Oracle, OpenJDK, IcedTea plugins, GIJ):</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -110,31 +113,31 @@ Remove all the Java related packages (Sun, Oracle, OpenJDK, IcedTea plugins, GIJ
 </span><span class='line'>sudo apt-get -y autoremove</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Purge config files:<br></p>
+<p>Purge config files:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>dpkg -l | grep ^rc | awk '{print($2)}' | xargs sudo apt-get -y purge</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Remove Java config and cache directory:<br></p>
+<p>Remove Java config and cache directory:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo bash -c 'ls -d /home/*/.java' | xargs sudo rm -rf</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Remove manually installed JVMs:<br></p>
+<p>Remove manually installed JVMs:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo rm -rf /usr/lib/jvm/*</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Remove Java entries, if there is still any, from the alternatives:<br></p>
+<p>Remove Java entries, if there is still any, from the alternatives:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>for g in ControlPanel java java_vm javaws jcontrol jexec keytool mozilla-javaplugin.so orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200 appletviewer apt extcheck HtmlConverter idlj jar jarsigner javac javadoc javah javap jconsole jdb jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii rmic schemagen serialver wsgen wsimport xjc xulrunner-1.9-javaplugin.so; do sudo update-alternatives --remove-all $g; done</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Search for possible remaining Java directories:<br></p>
+<p>Search for possible remaining Java directories:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -142,14 +145,14 @@ Remove all the Java related packages (Sun, Oracle, OpenJDK, IcedTea plugins, GIJ
 </span><span class='line'>sudo locate -b '\pack200'</span></code></pre></td></tr></table></div></figure>
 
 
-<p>2.移除Juniper_networks並重新安裝Java<br>
-Deleting ~/.juniper_networks:<br></p>
+<p>2.移除Juniper_networks並重新安裝Java<br/>
+Deleting ~/.juniper_networks:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rm -rf .juniper_networks/^C</span></code></pre></td></tr></table></div></figure>
 
 
-<p>Download the Oracle JDK from PPA:<br></p>
+<p>Download the Oracle JDK from PPA:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -179,10 +182,10 @@ Deleting ~/.juniper_networks:<br></p>
 </span><span class='line'>ln -s /usr/lib/jvm/java-7-oracle/jre/lib/i386/libnpjp2.so ~/.mozilla/plugins/</span></code></pre></td></tr></table></div></figure>
 
 
-<p>3.打開firefox瀏覽器連VPN, 查看/var/log/sysloeg, 應該不會出現以下error了:<br>
+<p>3.打開firefox瀏覽器連VPN, 查看/var/log/sysloeg, 應該不會出現以下error了:<br/>
 kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 4 in libc-2.15.so[b755e000+19f000]</p>
 
-<p>Reference:<br>
+<p>Reference:<br/>
 <a href="http://dougmunsinger.com/posts/juniper-vpn-on-linux.html">http://dougmunsinger.com/posts/juniper-vpn-on-linux.html</a>
 <a href="http://askubuntu.com/questions/84483/how-to-completely-uninstall-java">http://askubuntu.com/questions/84483/how-to-completely-uninstall-java</a>
 <a href="http://mad-scientist.us/juniper.html">http://mad-scientist.us/juniper.html</a>
@@ -256,6 +259,10 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
 <aside class="sidebar">
   
     <section>
+  <h1>About Me</h1>
+  <p><img src="http://www.gravatar.com/avatar/8fccbd6d982fba4c1e725d9c3124eaff.png">  時常異想天開的科技宅</p>
+</section>
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
@@ -276,6 +283,10 @@ kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 
       </li>
     
   </ul>
+</section>
+<section>
+  <h1>Tag Cloud</h1>
+    <span id="tag-cloud"><a href='/blog/categories/css' style='font-size: 160.0%'>CSS(1)</a> <a href='/blog/categories/linux' style='font-size: 160.0%'>Linux(1)</a> <a href='/blog/categories/markdown' style='font-size: 160.0%'>Markdown(1)</a> <a href='/blog/categories/meeting' style='font-size: 160.0%'>Meeting(1)</a> <a href='/blog/categories/principle' style='font-size: 160.0%'>Principle(1)</a> <a href='/blog/categories/vpn' style='font-size: 160.0%'>VPN(1)</a> </span>
 </section>
 
 

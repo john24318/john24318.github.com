@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Linux | John's code place]]></title>
   <link href="http://john24318.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://john24318.github.com/"/>
-  <updated>2013-03-09T18:45:16+08:00</updated>
+  <updated>2013-03-10T00:49:04+08:00</updated>
   <id>http://john24318.github.com/</id>
   <author>
     <name><![CDATA[John Liu]]></name>
@@ -20,7 +20,10 @@
     <id>http://john24318.github.com/blog/2013/03/01/tao-yan-de-juniper-vpn</id>
     <content type="html"><![CDATA[<p>在Linux安裝討厭的Juniper VPN</p>
 
-<p>1.完整移除Java:<br>
+<!-- more -->
+
+
+<p>1.完整移除Java:<br/>
 Remove all the Java related packages (Sun, Oracle, OpenJDK, IcedTea plugins, GIJ):
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -29,34 +32,34 @@ Remove all the Java related packages (Sun, Oracle, OpenJDK, IcedTea plugins, GIJ
 </span><span class='line'>apt-cache search java | awk '{print($1)}' | grep -E -e '&lt;sup>(ia32-)?(sun|oracle)-java'&lt;/sup> -e '&lt;sup>openjdk-'&lt;/sup> -e '&lt;sup>icedtea'&lt;/sup> -e '&lt;sup>(default|gcj)-j(re|dk)'&lt;/sup> -e '&lt;sup>gcj-(.*)-j(re|dk)'&lt;/sup> -e 'java-common' | xargs sudo apt-get -y remove
 </span><span class='line'>sudo apt-get -y autoremove</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Purge config files:<br>
+<p>Purge config files:<br/>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>dpkg -l | grep ^rc | awk '{print($2)}' | xargs sudo apt-get -y purge</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Remove Java config and cache directory:<br>
+<p>Remove Java config and cache directory:<br/>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo bash -c 'ls -d /home/*/.java' | xargs sudo rm -rf</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Remove manually installed JVMs:<br>
+<p>Remove manually installed JVMs:<br/>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo rm -rf /usr/lib/jvm/*</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Remove Java entries, if there is still any, from the alternatives:<br>
+<p>Remove Java entries, if there is still any, from the alternatives:<br/>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>for g in ControlPanel java java_vm javaws jcontrol jexec keytool mozilla-javaplugin.so orbd pack200 policytool rmid rmiregistry servertool tnameserv unpack200 appletviewer apt extcheck HtmlConverter idlj jar jarsigner javac javadoc javah javap jconsole jdb jhat jinfo jmap jps jrunscript jsadebugd jstack jstat jstatd native2ascii rmic schemagen serialver wsgen wsimport xjc xulrunner-1.9-javaplugin.so; do sudo update-alternatives --remove-all $g; done</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Search for possible remaining Java directories:<br>
+<p>Search for possible remaining Java directories:<br/>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>sudo updatedb
 </span><span class='line'>sudo locate -b '\pack200'</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>2.移除Juniper_networks並重新安裝Java<br>
-Deleting ~/.juniper_networks:<br>
+<p>2.移除Juniper_networks並重新安裝Java<br/>
+Deleting ~/.juniper_networks:<br/>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rm -rf .juniper_networks/&lt;sup>C&lt;/sup></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>Download the Oracle JDK from PPA:<br>
+<p>Download the Oracle JDK from PPA:<br/>
 <div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -80,10 +83,10 @@ Deleting ~/.juniper_networks:<br>
 </pre></td><td class='code'><pre><code class=''><span class='line'>mkdir ~/.mozilla/plugins/
 </span><span class='line'>ln -s /usr/lib/jvm/java-7-oracle/jre/lib/i386/libnpjp2.so ~/.mozilla/plugins/</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>3.打開firefox瀏覽器連VPN, 查看/var/log/sysloeg, 應該不會出現以下error了:<br>
+<p>3.打開firefox瀏覽器連VPN, 查看/var/log/sysloeg, 應該不會出現以下error了:<br/>
 kernel: [ 1947.323900] ncsvc[2468]: segfault at 2 ip b75a3b8e sp bfa05320 error 4 in libc-2.15.so[b755e000+19f000]</p>
 
-<p>Reference:<br>
+<p>Reference:<br/>
 <a href="http://dougmunsinger.com/posts/juniper-vpn-on-linux.html">http://dougmunsinger.com/posts/juniper-vpn-on-linux.html</a>
 <a href="http://askubuntu.com/questions/84483/how-to-completely-uninstall-java">http://askubuntu.com/questions/84483/how-to-completely-uninstall-java</a>
 <a href="http://mad-scientist.us/juniper.html">http://mad-scientist.us/juniper.html</a>

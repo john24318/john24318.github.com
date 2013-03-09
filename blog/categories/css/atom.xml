@@ -4,7 +4,7 @@
   <title><![CDATA[Category: CSS | John's code place]]></title>
   <link href="http://john24318.github.com/blog/categories/css/atom.xml" rel="self"/>
   <link href="http://john24318.github.com/"/>
-  <updated>2013-03-09T18:45:16+08:00</updated>
+  <updated>2013-03-10T00:49:04+08:00</updated>
   <id>http://john24318.github.com/</id>
   <author>
     <name><![CDATA[John Liu]]></name>
@@ -18,7 +18,14 @@
     <link href="http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/"/>
     <updated>2013-03-09T18:24:00+08:00</updated>
     <id>http://john24318.github.com/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none</id>
-    <content type="html"><![CDATA[<p>常用的4種display:</p>
+    <content type="html"><![CDATA[<p>常用的4種display:<br/>
+<strong>1. display: none</strong> <br/>
+<strong>2. display: inline</strong>  (ex:  &lt;a>、&lt;span>、&lt;b>、&lt;i>、&lt;img>、&lt;iframe>...)<br/>
+<strong>3.display: block</strong>  (ex:  &lt;div>、&lt;p>、&lt;h1>、&lt;h2>...)<br/>
+<strong>4.display: inline-block</strong></p>
+
+<!-- more -->
+
 
 <p><strong>1. display: none</strong></p>
 

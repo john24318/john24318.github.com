@@ -9,9 +9,9 @@
   <meta name="author" content="John Liu">
 
   
-  <meta name="description" content="常用的4種display:
-1. display: none 2. display: inline (ex: &lt;a>、&lt;span>、&lt;b>、&lt;i>、&lt;img>、&lt;iframe>&#8230;)
-3.display: block (ex: &lt;div>、&lt &hellip;">
+  <meta name="description" content="十個步驟搞懂CSS Position
+範例1: 若要子元素參考父元素的中間, 則父元素要設position: relative, 子元素要設position: absolute並且left: 50% (其餘子元素會往左上縮)
+範例2: 若要子元素參考父元素的左邊, 則子元素要設float: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +66,57 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/11/shi-ge-bu-zou-gao-dong-css-position/">十個步驟搞懂CSS Position</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-11T01:03:00+08:00" pubdate data-updated="true">Mar 11<span>th</span>, 2013</time>
+        
+         | <a href="/blog/2013/03/11/shi-ge-bu-zou-gao-dong-css-position/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>十個步驟搞懂CSS Position<br/>
+範例1: 若要子元素參考父元素的中間, 則父元素要設position: relative, 子元素要設position: absolute並且left: 50% (其餘子元素會往左上縮)<br/>
+範例2: 若要子元素參考父元素的左邊, 則子元素要設float: left (其餘子元素會往左上縮)</p>
+
+<p>不囉唆直接看圖:<br/>
+<a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">http://www.barelyfitz.com/screencast/html-training/css/positioning/</a><br/>
+&lt;div id=&#8221;div-before&#8221;>&lt;p>紫色&lt;/p>&lt;/div><br/>
+　&lt;div id=&#8221;div-1&#8221;><br/>
+　　&lt;p>黑色&lt;/p><br/>
+　　&lt;div id=&#8221;div-1a&#8221;>&lt;p>紅色&lt;/p>&lt;/div><br/>
+　　&lt;div id=&#8221;div-1b&#8221;>&lt;p>綠色&lt;/p>&lt;/div><br/>
+　　&lt;div id=&#8221;div-1c&#8221;>&lt;p>藍色&lt;/p>&lt;/div><br/>
+　&lt;/div><br/>
+&lt;div id=&#8221;div-after&#8221;>靛色&lt;/p>&lt;/div></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -274,6 +325,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/03/11/shi-ge-bu-zou-gao-dong-css-position/">十個步驟搞懂CSS Position</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/03/09/css-shu-xing-display-de-zhi-inline-block-inline-block-none/">CSS 屬性 display 的值 inline block inline-block none</a>
       </li>
     
@@ -293,7 +348,7 @@
 </section>
 <section>
   <h1>分類</h1>
-    <span id="tag-cloud"><a href='/blog/categories/css' style='font-size: 160.0%'>CSS(1)</a> <a href='/blog/categories/linux' style='font-size: 160.0%'>Linux(1)</a> <a href='/blog/categories/markdown' style='font-size: 160.0%'>Markdown(1)</a> <a href='/blog/categories/meeting' style='font-size: 160.0%'>Meeting(1)</a> <a href='/blog/categories/principle' style='font-size: 160.0%'>Principle(1)</a> <a href='/blog/categories/vpn' style='font-size: 160.0%'>VPN(1)</a> </span>
+    <span id="tag-cloud"><a href='/blog/categories/css' style='font-size: 160.0%'>CSS(2)</a> <a href='/blog/categories/linux' style='font-size: 130.0%'>Linux(1)</a> <a href='/blog/categories/markdown' style='font-size: 130.0%'>Markdown(1)</a> <a href='/blog/categories/meeting' style='font-size: 130.0%'>Meeting(1)</a> <a href='/blog/categories/principle' style='font-size: 130.0%'>Principle(1)</a> <a href='/blog/categories/vpn' style='font-size: 130.0%'>VPN(1)</a> </span>
 </section>
 
 

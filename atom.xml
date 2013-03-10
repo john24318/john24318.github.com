@@ -4,7 +4,7 @@
   <title><![CDATA[John's code place]]></title>
   <link href="http://john24318.github.com/atom.xml" rel="self"/>
   <link href="http://john24318.github.com/"/>
-  <updated>2013-03-10T21:17:01+08:00</updated>
+  <updated>2013-03-11T01:39:02+08:00</updated>
   <id>http://john24318.github.com/</id>
   <author>
     <name><![CDATA[John Liu]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[十個步驟搞懂CSS Position]]></title>
+    <link href="http://john24318.github.com/blog/2013/03/11/shi-ge-bu-zou-gao-dong-css-position/"/>
+    <updated>2013-03-11T01:03:00+08:00</updated>
+    <id>http://john24318.github.com/blog/2013/03/11/shi-ge-bu-zou-gao-dong-css-position</id>
+    <content type="html"><![CDATA[<p>十個步驟搞懂CSS Position<br/>
+範例1: 若要子元素參考父元素的中間, 則父元素要設position: relative, 子元素要設position: absolute並且left: 50% (其餘子元素會往左上縮)<br/>
+範例2: 若要子元素參考父元素的左邊, 則子元素要設float: left (其餘子元素會往左上縮)</p>
+
+<p>不囉唆直接看圖:<br/>
+<a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">http://www.barelyfitz.com/screencast/html-training/css/positioning/</a><br/>
+&lt;div id=&#8221;div-before&#8221;>&lt;p>紫色&lt;/p>&lt;/div><br/>
+　&lt;div id=&#8221;div-1&#8221;><br/>
+　　&lt;p>黑色&lt;/p><br/>
+　　&lt;div id=&#8221;div-1a&#8221;>&lt;p>紅色&lt;/p>&lt;/div><br/>
+　　&lt;div id=&#8221;div-1b&#8221;>&lt;p>綠色&lt;/p>&lt;/div><br/>
+　　&lt;div id=&#8221;div-1c&#8221;>&lt;p>藍色&lt;/p>&lt;/div><br/>
+　&lt;/div><br/>
+&lt;div id=&#8221;div-after&#8221;>靛色&lt;/p>&lt;/div></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[CSS 屬性 display 的值 inline block inline-block none]]></title>

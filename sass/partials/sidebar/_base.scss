@@ -20,6 +20,9 @@ aside.sidebar {
         padding-top: .4em;
       }
     }
+    span>a {
+      line-height: 28px;
+    }
   }
   img {
     @extend .flex-content;
